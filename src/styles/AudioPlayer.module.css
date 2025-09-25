@@ -1,0 +1,99 @@
+.player {
+  background: #222;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+}
+
+.info h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.info p {
+  color: #999;
+  font-size: 12px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.playBtn {
+  width: 40px;
+  height: 40px;
+  background: #4f46e5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+.progress {
+  width: 200px;
+  height: 4px;
+  background: #444;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: #4f46e5;
+  width: 30%;
+}
+
+.time {
+  font-size: 12px;
+  color: #999;
+  min-width: 40px;
+}
+
+.placeholder {
+  background: #222;
+  border: 1px dashed #444;
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  color: #999;
+  margin-top: 24px;
+}
+
+.audio {
+  width: 100%;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .player {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .progress {
+    width: 150px;
+  }
+}
