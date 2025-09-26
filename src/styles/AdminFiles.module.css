@@ -1,0 +1,323 @@
+.container {
+  display: grid;
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 2rem;
+}
+
+.error {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.error button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.uploadSection {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.uploadSection h2 {
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.uploadGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.uploadCard {
+  background: rgba(13, 18, 36, 0.6);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.uploadCard h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filesSection {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sectionHeader h2 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.filterButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-soft);
+  background: rgba(13, 18, 36, 0.6);
+  color: var(--text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.filterButton:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+.filterButton.active {
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  color: #060915;
+  border-color: var(--accent);
+}
+
+.filesList {
+  display: grid;
+  gap: 1rem;
+}
+
+.fileCard {
+  background: rgba(13, 18, 36, 0.6);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.fileCard:hover {
+  border-color: rgba(148, 163, 184, 0.4);
+  background: rgba(13, 18, 36, 0.8);
+}
+
+.filePreview {
+  width: 80px;
+  height: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-soft);
+}
+
+.filePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.audioIcon {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+.fileInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.fileName {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  word-break: break-all;
+}
+
+.fileMeta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.fileSize {
+  color: var(--text-muted);
+}
+
+.fileType {
+  color: var(--text-muted);
+}
+
+.fileUrl {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileUrl code {
+  color: var(--accent);
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+.fileActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.copyButton,
+.viewButton,
+.deleteButton {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.copyButton {
+  background: rgba(34, 211, 238, 0.2);
+  color: #67e8f9;
+  border-color: rgba(34, 211, 238, 0.3);
+}
+
+.copyButton:hover {
+  background: rgba(34, 211, 238, 0.3);
+  border-color: rgba(34, 211, 238, 0.5);
+}
+
+.viewButton {
+  background: rgba(34, 197, 94, 0.2);
+  color: #86efac;
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+.viewButton:hover {
+  background: rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.deleteButton {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.deleteButton:hover {
+  background: rgba(239, 68, 68, 0.3);
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .uploadGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterButtons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .fileCard {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .filePreview {
+    justify-self: center;
+  }
+
+  .fileActions {
+    justify-content: center;
+  }
+
+  .filterButtons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .uploadSection,
+  .filesSection {
+    padding: 1rem;
+  }
+
+  .filterButtons {
+    flex-direction: column;
+  }
+
+  .filterButton {
+    text-align: center;
+  }
+}
